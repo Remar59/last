@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  margin: 0 ;
+}
+
+/* main container player */
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  /* Optionally set the width to span the entire page */
+  background: #000000cc; //Couleur à mettre en dynamique par rapport à la couleur de la miniature
+  border-radius: 10px;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+
+  }
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+.upperInner {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 550px) {
+    justify-content: center;
+  }
+}
+
+/* info song player */
+.audio-info {
+  display: flex;
+  gap: 20px;
+}
+
+.text {
+  color: #f50;
+}
+
+.title {
+  color: #fff;
+  font-weight: 100;
+  font-size: 32px;
+  margin-bottom: 0;
+  padding: 2px;
+  line-height: 37px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .2);
+
+  @media screen and (max-width: 900px) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+/* image songs */
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.audio-image {
+  width: 100px;
+  height: 100px;
+  background: #1e1e1e;
+
+  img {
+    min-width: 100px;
+
+    @media screen and (max-width: 900px) {
+      min-width: 60px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.audio-icon {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: #989898;
+}
+
+.audio-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* Contrôles player */
+.controls-wrapper {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: space-between;
+
+  @media screen and (max-width: 550px) {
+    justify-content: center;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+}
+
+.loop-active{
+  color: green;
+}
+
+.playButton {
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+button svg {
+  font-size: 20px;
+
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.volume button {
+  margin: 0;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}
+
+/* Barre progression */
+.time {
+  color: #fff;
+  font-size: 13px;
+  line-height: 46px;
+}
+
+.time.current {
+  color: #f50;
+}

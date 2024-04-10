@@ -7,7 +7,7 @@ import LoginModal from './LoginModal';
 import { Link } from "react-router-dom";
 import "../styles/Home.scss";
 import { tracks } from '../data/tracks';
-import { stopPlayback, playTrack, setCurrentTrack } from '../redux/actions';
+import { setCurrentTrack } from '../redux/actions';
 
 
 function Home() {
@@ -29,14 +29,11 @@ function Home() {
     setModalState(newState);
   };
 
-  const changeTrack = (soundId) => {
-    const trackIndex = tracks.findIndex(track => track.id === soundId);
-    if (trackIndex !== -1) {
-      dispatch(stopPlayback()); // Stop any currently playing track
-      setTimeout(() => {
-        dispatch(setCurrentTrack(trackIndex));
-        dispatch(playTrack()); // Begin playback
-      }, 100); // Short delay to ensure the playback stops before starting anew
+  const changeSounds = (id) => {
+    const selectedSound = sounds.find((sound) => sound.id === id);
+    const selectedTrackInfo = tracks.find((track) => track.id === selectedSound.id);
+    if (selectedTrackInfo) {
+      dispatch(setCurrentTrack(selectedTrackInfo));
     }
   };
 
@@ -96,7 +93,7 @@ function Home() {
                   className="popularimg"
                   src={sound.image}
                   alt={sound.name}
-                  onClick={() => changeTrack(sound.id)}
+                  onClick={() => changeSounds(sound.id)}
                 />
                 <label key={sound.id + "_label"} htmlFor="img">
                   {sound.name}
