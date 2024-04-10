@@ -1,0 +1,142 @@
+//@import "reset";
+
+
+p {
+    margin: 0;
+}
+
+body{
+    padding-top: 0;
+}
+
+.home-container {
+    height: 100vh;
+    background: linear-gradient(#040306, #22273f);
+
+
+    .home-content {
+        color: white;
+        font-size: 24px;
+        width: 95vw;
+        margin: auto;
+
+        h2 {
+            margin: 10px 10px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            .logoHello{
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .logoimg{
+                width: 5rem;
+                height: 5rem;
+            }
+ 
+            .userConnect {
+                display: block;
+
+                @media screen and (max-width: 900px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .connect {
+                    color: black;
+                    padding: 5px;
+                    background-color: white;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    text-decoration: none;
+                    text-align: center;
+                    margin-right: 10px;
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+
+                .signup {
+                    color: white;
+                    padding: 5px;
+                    background-color: #22273f;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    text-decoration: none;
+                    text-align: center;
+                    margin-right: 10px;
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+
+
+            }
+        }
+
+        .category-scrolling {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scrollbar-width: none;
+
+            a {
+                text-decoration: none;
+            }
+
+            div {
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                max-width: 130px;
+
+
+                img {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                label {
+                    color: white;
+                    margin-top: 10px;
+                }
+            }
+
+        }
+
+        .popular-scrolling {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scrollbar-width: none;
+
+            .popular {
+                text-decoration: none;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                max-width: 130px;
+
+                img {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 5px;
+                }
+
+                label {
+                    color: white;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
