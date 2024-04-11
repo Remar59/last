@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from 'react-redux';
 import { Link, useParams } from "react-router-dom";
 import "../styles/_category.scss";
 import { tracks } from "../data/tracks";
+import { setCurrentTrack } from '../redux/actions';
 
 function Category() {
 
@@ -9,18 +11,15 @@ function Category() {
     const { categoryId } = useParams();
     const [categoryName, setCategoryName] = useState({ soundId: [] });
     const [sounds, setSounds] = useState([]);
-    
+    const dispatch = useDispatch();
+
     const changeSounds = (id) => {
-        console.log(tracks);
-        //const selectedSound = sounds.find((sound) => sound._id === id);
-        const selectedTrackInfo = tracks.find(
-          (track) => track.id === id
-        );
-        console.log(selectedTrackInfo);
-        setSelectedTrack(selectedTrackInfo);
-        // extractDominantColor(selectedSound.image);
-        console.log(id);
-      };
+        const selectedSound = sounds.find((sound) => sound.id === id);
+        const selectedTrackInfo = tracks.find((track) => track.id === selectedSound.id);
+        if (selectedTrackInfo) {
+            dispatch(setCurrentTrack(selectedTrackInfo));
+        }
+    };
 
     const listSound = categoryName.soundId.map((item) => {
         return (
@@ -32,6 +31,20 @@ function Category() {
             </>
         )
     })
+
+    useEffect(() => {
+        async function fetchData(url, setter) {
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                setter(data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+
+        fetchData("http://localhost:5500/sounds", setSounds);
+    }, []);
 
     useEffect(() => {
         const fetchCategoryDetails = async () => {

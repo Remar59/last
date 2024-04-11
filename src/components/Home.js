@@ -1,7 +1,6 @@
 // src/components/Home.js
 import React, { useState, useEffect, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
-import AudioPlayer from './AudioPlayer';
 import RegisterModal from './RegisterModal';
 import LoginModal from './LoginModal';
 import { Link } from "react-router-dom";
