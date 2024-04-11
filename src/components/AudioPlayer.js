@@ -17,11 +17,13 @@ const DisplayTrack = ({
   progressBarRef,
   handleNext,
 }) => {
+  const dispatch = useDispatch();
+
   // permet de charger les données de la musique, 
   //notamment la barre de progression en récupérant la durée
   const onLoadedMetadata = () => {
     const seconds = audioRef.current.duration;
-    setDuration(seconds);
+    dispatch(setDuration(seconds));
     progressBarRef.current.max = seconds;
   };
 
@@ -88,10 +90,14 @@ const Controls = ({
     if (audioRef.current) {
       const currentTime = audioRef.current.currentTime;
       setTimeProgress(currentTime);
+      const rangeProgress = progressBarRef.current.value * 100 / duration
+      console.log(duration)
+      console.log(progressBarRef.current.value)
+      console.log(rangeProgress);
       progressBarRef.current.value = currentTime;
       progressBarRef.current.style.setProperty(
         '--range-progress',
-        `${(progressBarRef.current.value / duration) * 100}%`
+        `${rangeProgress}%`
       );
   playAnimationRef.current = requestAnimationFrame(repeat);
 }
@@ -228,7 +234,7 @@ const AudioPlayer = ({ backgroundColor }) => {
   // states
   const [background, setBackground] = useState('transparent');
   const { trackIndex, currentTrack, timeProgress, duration } = useSelector(state => state);
-  const dispatch = useDispatch();
+
 
   const audioRef = useRef(null);
   const progressBarRef = useRef(null);

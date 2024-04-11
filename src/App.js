@@ -9,7 +9,6 @@ import Categories from "./components/Categories";
 function App() {
   return (
     <Router>
-      <AudioPlayer />
         <Routes>
           <Route  path="/" element={<Home />} />
           <Route path="/categories" element={<Categories />} />

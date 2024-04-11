@@ -5,9 +5,9 @@ Custom Input range
 /* Input range - chrome and safari */
 
 input[type="range"] {
-    --range-progress: 0;
+    --range-progress: 50;
     
-    -webkit-appearance: none;
+    appearance: none;
     position: relative;
     background:#ccc;
     width: 100%;

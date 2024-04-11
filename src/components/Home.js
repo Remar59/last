@@ -103,7 +103,6 @@ function Home() {
           ))}
         </div>
       </div>
-      <AudioPlayer track={selectedTrack}/>
     </div>
   );
 }

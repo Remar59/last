@@ -41,10 +41,6 @@ function Categories(setSelectedTrack) {
                 </div>
               </Link>
             ))}
-
-            <AudioPlayer
-              setSelectedTrack={setSelectedTrack}
-            />
           </div>
         </div>
       </div>
