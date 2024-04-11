@@ -13,7 +13,6 @@ function Home() {
   const [modalState, setModalState] = useState({ showRegister: false, showLogin: false });
   const [categories, setCategories] = useState([]);
   const [sounds, setSounds] = useState([]);
-  const [selectedTrack, setSelectedTrack] = useState(null);
   const dispatch = useDispatch();
 
 

@@ -7,7 +7,6 @@ import { setCurrentTrack } from '../redux/actions';
 
 function Category() {
 
-    const [selectedTrack, setSelectedTrack] = useState(null);
     const { categoryId } = useParams();
     const [categoryName, setCategoryName] = useState({ soundId: [] });
     const [sounds, setSounds] = useState([]);
