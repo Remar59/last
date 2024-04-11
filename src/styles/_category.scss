@@ -1,0 +1,59 @@
+body {
+    height: 100vh;
+    background: linear-gradient(#040306, #22273f);
+
+    .categoryPage {
+        width: 80%;
+        margin: auto;
+        
+        .logoimg {
+            width: 50px;
+            height: 50px;
+            margin-top: 4rem;
+        }
+
+        .categoryContainer {
+            padding-top: 2rem;
+
+            h1 {
+                margin: 0;
+                color: white;
+                text-align: center;
+            }
+        
+            .sounds-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                grid-gap: 20px;
+                width: 75%;
+                margin: auto;
+                padding-top: 4rem;
+    
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                    text-align: center;
+                
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 10px;
+                    }
+                
+                    label {
+                        color: white;
+                        font-size: 24px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
