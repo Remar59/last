@@ -67,7 +67,7 @@ const AudioPlayer = ({ backgroundColor }) => {
             />
           </div>
           <ProgressBar
-            {...{ progressBarRef, audioRef, timeProgress }}
+            {...{ progressBarRef, audioRef, timeProgress, duration }}
           />
         </div>
       </div>
