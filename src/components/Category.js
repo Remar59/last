@@ -20,7 +20,7 @@ function Category() {
         }
     };
 
-    const listSound = categoryName.soundId.map((item) => {
+    const listSound = categoryName.soundId && categoryName.soundId.map((item) => {
         return (
             <>
                 <div className="item">
