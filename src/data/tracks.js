@@ -1,4 +1,4 @@
-// audio files
+// fichiers audio
 import Concerntheme from './songs/Concern.mp3';
 import Explorationtheme from './songs/Exploration.mp3';
 import Fighttheme from './songs/Fight.mp3';
@@ -12,7 +12,7 @@ import Workingtheme from './songs/Working.mp3';
 import ActionSuspenstheme from './songs/ActionSuspens.mp3';
 
 
-
+//tracklist
 export const tracks = [
   
   {

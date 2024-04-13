@@ -1,4 +1,3 @@
-// src/components/Home.js
 import React, { useState, useEffect, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import RegisterModal from './RegisterModal';
@@ -53,6 +52,10 @@ function Home() {
   return (
     <div className="home-container">
       <div className="home-content">
+      <div className="header">
+      <div className="logoHello">
+            <img className="logoimg" src="./logo.png" alt="" />
+          </div>
         <p>
           La home page !
         </p>
@@ -62,6 +65,7 @@ function Home() {
 
       {modalState.showRegister && <RegisterModal onClose={() => setModalState({ ...modalState, showRegister: false })} />}
       {modalState.showLogin && <LoginModal onClose={() => setModalState({ ...modalState, showLogin: false })} />}
+    </div>
     </div>
         <h2>Catégories</h2>
         <div className="category-scrolling">
