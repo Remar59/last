@@ -56,9 +56,6 @@ function Home() {
       <div className="logoHello">
             <img className="logoimg" src="./logo.png" alt="" />
           </div>
-        <p>
-          La home page !
-        </p>
         <div>
       <button onClick={() => toggleModal('showRegister')}>Register</button>
       <button onClick={() => toggleModal('showLogin')}>Login</button>
