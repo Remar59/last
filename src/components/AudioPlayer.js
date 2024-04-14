@@ -6,19 +6,19 @@ import DisplayTrack from "./DisplayTrack";
 import Controls from "./Controls";
 import ProgressBar from "./ProgressBar";
 
-//récupère les props pour la musique
+//récupère les props pour le background
 const AudioPlayer = ({ backgroundColor }) => {
+
   // states
-  const [background, setBackground] = useState('transparent');
   const { trackIndex, currentTrack, timeProgress, duration } = useSelector(state => state);
 
 
   const audioRef = useRef(null);
   const progressBarRef = useRef(null);
 
+  //appelle directement le backgroundcolor
   useEffect(() => {
-    setBackground(backgroundColor);
-  }, [backgroundColor]);
+}, [backgroundColor]);
 
  
 
