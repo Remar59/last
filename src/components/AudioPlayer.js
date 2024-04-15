@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { tracks } from "../data/tracks";
 import { setTrackIndex, setCurrentTrack, setTimeProgress, setDuration } from '../redux/actions';
 import DisplayTrack from "./DisplayTrack";
@@ -11,7 +11,7 @@ const AudioPlayer = ({ backgroundColor }) => {
 
   // states
   const { trackIndex, currentTrack, timeProgress, duration } = useSelector(state => state);
-
+const dispatch = useDispatch();
 
   const audioRef = useRef(null);
   const progressBarRef = useRef(null);
@@ -22,19 +22,11 @@ const AudioPlayer = ({ backgroundColor }) => {
 
  
 
-// Gère la musique suivante
-  const handleNext = () => {
-    //vérifie que ça ne soit pas la dernière musique de la liste
-    if (trackIndex >= tracks.length - 1) {
-      //si c'est le cas, retourne à la première musique de la liste
-      setTrackIndex(0);
-      setCurrentTrack(tracks[0]);
-    } else {
-      // sinon joue la suivante
-      setTrackIndex((prev) => prev + 1);
-      setCurrentTrack(tracks[trackIndex + 1]);
-    }
-  };
+const handleNext = () => {
+  const nextIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex + 1;
+  dispatch(setTrackIndex(nextIndex));
+  // No need to call setCurrentTrack as the reducer handles updating the currentTrack
+};
 
   
 

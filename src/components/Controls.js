@@ -19,6 +19,7 @@ import {
 import {
   TiArrowLoop,
 } from "react-icons/ti";
+import { useDispatch } from 'react-redux';
 
 const Controls = ({
   audioRef,
@@ -35,6 +36,7 @@ const Controls = ({
   const [volume, setVolume] = useState(60);
   const [muteVolume, setMuteVolume] = useState(false);
   const [looping, setLooping] = useState(false);
+  const dispatch = useDispatch();
 
   const togglePlayPause = () => {
     setIsPlaying((prev) => !prev);
@@ -86,14 +88,9 @@ const skipBackward = () => {
 };
 
 const handlePrevious = () => {
-  if (trackIndex === 0) {
-    let lastTrackIndex = tracks.length - 1;
-    setTrackIndex(lastTrackIndex);
-    setCurrentTrack(tracks[lastTrackIndex]);
-  } else {
-    setTrackIndex((prev) => prev - 1);
-    setCurrentTrack(tracks[trackIndex - 1]);
-  }
+  const prevIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex - 1;
+  dispatch(setTrackIndex(prevIndex));
+  // No need to call setCurrentTrack as the reducer handles updating the currentTrack
 };
 
 useEffect(() => {
