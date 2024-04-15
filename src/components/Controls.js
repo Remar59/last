@@ -92,6 +92,7 @@ const handlePrevious = () => {
   dispatch(setTrackIndex(prevIndex));
 };
 
+
 useEffect(() => {
   if (audioRef) {
     audioRef.current.volume = volume / 100;

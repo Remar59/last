@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import RegisterModal from './RegisterModal';
 import LoginModal from './LoginModal';
 import { Link } from "react-router-dom";
-import "../styles/Home.scss";
+import "../styles/_home.scss";
 import { tracks } from '../data/tracks';
 import { setCurrentTrack } from '../redux/actions';
 
