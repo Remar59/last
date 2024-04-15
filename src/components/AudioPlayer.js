@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { tracks } from "../data/tracks";
 import { setTrackIndex, setTimeProgress, setDuration } from '../redux/actions';
 import DisplayTrack from "./DisplayTrack";
@@ -11,6 +11,7 @@ const AudioPlayer = ({ backgroundColor }) => {
 
   // states
   const { trackIndex, currentTrack, timeProgress, duration } = useSelector(state => state);
+const dispatch = useDispatch();
 
   const audioRef = useRef(null);
   const progressBarRef = useRef(null);
@@ -19,7 +20,14 @@ const AudioPlayer = ({ backgroundColor }) => {
   useEffect(() => {
 }, [backgroundColor]);
 
-  
+ 
+
+const handleNext = () => {
+  const nextIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex + 1;
+  dispatch(setTrackIndex(nextIndex));
+  // No need to call setCurrentTrack as the reducer handles updating the currentTrack
+};
+
 
   return (
     <>
@@ -32,6 +40,7 @@ const AudioPlayer = ({ backgroundColor }) => {
                 audioRef,
                 setDuration,
                 progressBarRef,
+                handleNext,
               }}
             />
             <Controls
@@ -43,6 +52,7 @@ const AudioPlayer = ({ backgroundColor }) => {
                 tracks,
                 trackIndex,
                 setTrackIndex,
+                handleNext,
               }}
             />
           </div>

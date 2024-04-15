@@ -29,6 +29,8 @@ const Controls = ({
   tracks,
   trackIndex,
   setTrackIndex,
+  setCurrentTrack,
+  handleNext,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(60);
@@ -88,11 +90,6 @@ const skipBackward = () => {
 const handlePrevious = () => {
   const prevIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex - 1;
   dispatch(setTrackIndex(prevIndex));
-};
-
-const handleNext = () => {
-  const nextIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex + 1;
-  dispatch(setTrackIndex(nextIndex));
 };
 
 useEffect(() => {
