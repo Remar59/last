@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { setTimeProgress, setDuration } from '../redux/actions';
-import '../styles/_player.scss';
-import '../styles/_progressBar.scss';
+import { setTimeProgress, setDuration } from '../../redux/actions';
+import '../../styles/_player.scss';
+import '../../styles/_progressBar.scss';
 import { useEffect } from 'react';
 
 const ProgressBar = ({ progressBarRef, audioRef, timeProgress, duration }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { tracks } from "../data/tracks";
-import { setTrackIndex, setTimeProgress, setDuration } from '../redux/actions';
+import { tracks } from "../../data/tracks";
+import { setTrackIndex, setTimeProgress, setDuration } from '../../redux/actions';
 import DisplayTrack from "./DisplayTrack";
 import Controls from "./Controls";
 import ProgressBar from "./ProgressBar";
@@ -25,7 +25,6 @@ const dispatch = useDispatch();
 const handleNext = () => {
   const nextIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex + 1;
   dispatch(setTrackIndex(nextIndex));
-  // No need to call setCurrentTrack as the reducer handles updating the currentTrack
 };
 
 
