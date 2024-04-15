@@ -88,13 +88,11 @@ const skipBackward = () => {
 const handlePrevious = () => {
   const prevIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex - 1;
   dispatch(setTrackIndex(prevIndex));
-  // No need to call setCurrentTrack as the reducer handles updating the currentTrack
 };
 
 const handleNext = () => {
   const nextIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex + 1;
   dispatch(setTrackIndex(nextIndex));
-  // No need to call setCurrentTrack as the reducer handles updating the currentTrack
 };
 
 useEffect(() => {
