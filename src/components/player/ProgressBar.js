@@ -54,6 +54,8 @@ const ProgressBar = ({ progressBarRef, audioRef, timeProgress, duration }) => {
         defaultValue="0"
         onChange={handleProgressChange}
       />
+      
+      {/* Permet de vérifier la durée joué par la piste*/}
       {console.log('Durée de la piste affichée dans le composant ProgressBar:', duration)}
       <span className="time">{formatTime(duration)}</span>
     </div>
