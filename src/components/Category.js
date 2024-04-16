@@ -42,13 +42,13 @@ function Category() {
             }
         }
 
-        fetchData("http://localhost:5500/sounds", setSounds);
+        fetchData("https://api-liremersion-1.onrender.com/sounds", setSounds);
     }, []);
 
     useEffect(() => {
         const fetchCategoryDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5500/categories/${categoryId}`);
+                const response = await fetch(`https://api-liremersion-1.onrender.com/categories/${categoryId}`);
                 const data = await response.json();
                 console.log(data);
                 setCategoryName(data);

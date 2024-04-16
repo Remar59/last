@@ -10,7 +10,7 @@ function Categories(setSelectedTrack) {
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const response = await fetch("http://localhost:5500/categories");
+        const response = await fetch("https://api-liremersion-1.onrender.com/categories");
         const data = await response.json();
         setCategories(data);
       } catch (error) {
