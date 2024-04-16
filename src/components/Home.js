@@ -45,8 +45,8 @@ function Home() {
       }
     }
 
-    fetchData("http://localhost:5500/categories", setCategories);
-    fetchData("http://localhost:5500/sounds", setSounds);
+    fetchData("https://api-liremersion-1.onrender.com/categories", setCategories);
+    fetchData("https://api-liremersion-1.onrender.com/sounds", setSounds);
   }, []);
 
   return (
