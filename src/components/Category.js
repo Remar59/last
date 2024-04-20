@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import "../styles/_category.scss";
 import { tracks } from "../data/tracks";
 import { setCurrentTrack } from '../redux/actions';
+import { FaArrowLeft } from "react-icons/fa6";
 
 function Category() {
 
@@ -11,6 +12,7 @@ function Category() {
     const [categoryName, setCategoryName] = useState({ soundId: [] });
     const [sounds, setSounds] = useState([]);
     const dispatch = useDispatch();
+    const style =  { color: "white",fontSize: "2em"}
 
     const changeSounds = (id) => {
         const selectedSound = sounds.find((sound) => sound.id === id);
@@ -63,6 +65,7 @@ function Category() {
     return (
         <div className="categoryPage">
             <Link to={"/"}>
+                <FaArrowLeft style={style}/>
                 <img className="logoimg" src="../logo.png" alt="" />
             </Link>
             <div className="categoryContainer">

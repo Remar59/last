@@ -10,7 +10,7 @@ import ProgressBar from "./ProgressBar";
 const AudioPlayer = ({ backgroundColor }) => {
 
   // states
-  const { trackIndex, currentTrack, timeProgress, duration } = useSelector(state => state);
+const { trackIndex, currentTrack, timeProgress, duration } = useSelector(state => state);
 const dispatch = useDispatch();
 
   const audioRef = useRef(null);
@@ -19,8 +19,6 @@ const dispatch = useDispatch();
   //appelle directement le backgroundcolor
   useEffect(() => {
 }, [backgroundColor]);
-
- 
 
 const handleNext = () => {
   const nextIndex = trackIndex >= tracks.length - 1 ? 0 : trackIndex + 1;
@@ -33,6 +31,7 @@ const handleNext = () => {
       <div className="audio-player" style={{ backgroundColor: currentTrack.color }}>
         <div className="inner">
           <div className="upperInner">
+                        {/*Le spread operator permet ici de simplirfier le code, évite d'écrire currentTrack={currentTrack}... */}
             <DisplayTrack
               {...{
                 currentTrack,

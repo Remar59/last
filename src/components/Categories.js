@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../styles/_categories.scss";
 import { Link } from "react-router-dom";
-
+import { FaArrowLeft } from "react-icons/fa6";
 
 function Categories(setSelectedTrack) {
   const [categories, setCategories] = useState([]);
+  const style =  { color: "white",fontSize: "2em"}
 
 
   useEffect(() => {
@@ -26,6 +27,7 @@ function Categories(setSelectedTrack) {
     <div className="bg">
       <div className="bodyCat">
         <Link to={"/"}>
+        <FaArrowLeft style={style}/>
           <img className="logoimg" src="../logo.png" alt="" />
         </Link>
         <div className="categories-grid-container">

@@ -29,7 +29,6 @@ const Controls = ({
   tracks,
   trackIndex,
   setTrackIndex,
-  setCurrentTrack,
   handleNext,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
