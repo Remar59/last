@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import RegisterModal from './RegisterModal';
 import LoginModal from './LoginModal';
@@ -14,6 +14,7 @@ function Home() {
   const [sounds, setSounds] = useState([]);
   const dispatch = useDispatch();
 
+  // gestion des modales de connexion.
 
   const toggleModal = (modalName) => {
     const isVisible = modalState[modalName];
@@ -34,6 +35,7 @@ function Home() {
     }
   };
 
+  // permet de grouper l'appel API pour les sons et les catégories.
   useEffect(() => {
     async function fetchData(url, setter) {
       try {
@@ -64,17 +66,16 @@ function Home() {
       {modalState.showLogin && <LoginModal onClose={() => setModalState({ ...modalState, showLogin: false })} />}
     </div>
     </div>
+
         <h2>Catégories</h2>
         <div className="category-scrolling">
           {categories.map((item) => (
-            <Fragment>
               <Link to={`/category/${item._id}`}>
                 <div>
                   <img src={item.image} alt={item.name} />
                   <label htmlFor="img">{item.name}</label>
                 </div>
               </Link>
-            </Fragment>
           ))}
           <Link to={"/categories"}>
             <div>
@@ -83,10 +84,10 @@ function Home() {
             </div>
           </Link>
         </div>
+        
         <h2>Sons populaires</h2>
         <div className="popular-scrolling">
           {sounds.map(sound => (
-            <Fragment>
               <div className="popular">
                 <img
                   className="popularimg"
@@ -98,7 +99,6 @@ function Home() {
                   {sound.name}
                 </label>
               </div>
-            </Fragment>
           ))}
         </div>
       </div>

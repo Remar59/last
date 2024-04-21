@@ -3,10 +3,11 @@ import "../styles/_categories.scss";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 
-function Categories(setSelectedTrack) {
+function Categories() {
   const [categories, setCategories] = useState([]);
   const style =  { color: "white",fontSize: "2em"}
 
+//récupère les catégories sur le render, et les affiches.
 
   useEffect(() => {
     async function fetchCategories() {
@@ -18,8 +19,6 @@ function Categories(setSelectedTrack) {
         console.error("Error fetching categories:", error);
       }
     }
-
-
     fetchCategories();
   }, []);
 
