@@ -1,5 +1,3 @@
-//@import "reset";
-
 
 p {
     margin: 0;
@@ -31,53 +29,48 @@ body{
             margin-left: 10px;
             margin-right: 10px;
 
-            .logoHello{
-                display: flex;
-                gap: 2rem;
-                align-items: center;
-            }
-
             .logoimg{
                 width: 5rem;
                 height: 5rem;
             }
  
-            .userConnect {
-                display: block;
+            // Connexion en cours (à conserver)
+            // .userConnect {
+            //     display: block;
 
-                @media screen and (max-width: 900px) {
-                    display: flex;
-                    flex-direction: column;
-                }
+            //     @media screen and (max-width: 900px) {
+            //         display: flex;
+            //         flex-direction: column;
+            //     }
 
-                .connect {
-                    color: black;
-                    padding: 5px;
-                    background-color: white;
-                    border-radius: 10px;
-                    margin-bottom: 10px;
-                    text-decoration: none;
-                    text-align: center;
-                    margin-right: 10px;
-                    font-size: 2rem;
-                    cursor: pointer;
-                }
+            //     .connect {
+            //         color: black;
+            //         padding: 5px;
+            //         background-color: white;
+            //         border-radius: 10px;
+            //         margin-bottom: 10px;
+            //         text-decoration: none;
+            //         text-align: center;
+            //         margin-right: 10px;
+            //         font-size: 2rem;
+            //         cursor: pointer;
+            //     }
 
-                .signup {
-                    color: white;
-                    padding: 5px;
-                    background-color: #22273f;
-                    border-radius: 10px;
-                    margin-bottom: 10px;
-                    text-decoration: none;
-                    text-align: center;
-                    margin-right: 10px;
-                    font-size: 2rem;
-                    cursor: pointer;
-                }
+            //     .signup {
+            //         color: white;
+            //         padding: 5px;
+            //         background-color: #22273f;
+            //         border-radius: 10px;
+            //         margin-bottom: 10px;
+            //         text-decoration: none;
+            //         text-align: center;
+            //         margin-right: 10px;
+            //         font-size: 2rem;
+            //         cursor: pointer;
+            //     }
 
 
-            }
+            // }
         }
 
         .category-scrolling {

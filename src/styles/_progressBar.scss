@@ -1,8 +1,8 @@
 /* =========================
-Custom Input range 
+Barre de progression custom
 =============================*/
 
-/* Input range - chrome and safari */
+/* progressbar - chrome et safari */
 
 input[type="range"] {
     --range-progress: 50;
@@ -16,7 +16,7 @@ input[type="range"] {
     cursor: pointer;
   }
   
-  /* Input range - firefox */
+  /* progressbar- firefox */
   input[type="range"]::-moz-range-track {
     position: relative;
     background:#ccc;

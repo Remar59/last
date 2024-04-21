@@ -58,7 +58,7 @@ function Home() {
       <div className="logoHello">
             <img className="logoimg" src="./logo.png" alt="" />
           </div>
-        <div>
+        <div className='userConnect'>
       <button onClick={() => toggleModal('showRegister')}>Register</button>
       <button onClick={() => toggleModal('showLogin')}>Login</button>
 
@@ -84,7 +84,7 @@ function Home() {
             </div>
           </Link>
         </div>
-        
+
         <h2>Sons populaires</h2>
         <div className="popular-scrolling">
           {sounds.map(sound => (

@@ -7,14 +7,14 @@ body {
   margin: 0 ;
 }
 
-/* main container player */
+/* container du player */
 .audio-player {
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 85%;
-  /* Optionally set the width to span the entire page */
+
   background: #000000cc; //Couleur à mettre en dynamique par rapport à la couleur de la miniature
   border-radius: 10px;
 
@@ -39,7 +39,7 @@ body {
   }
 }
 
-/* info song player */
+/* info musiques */
 .audio-info {
   display: flex;
   gap: 20px;
@@ -65,7 +65,7 @@ body {
   }
 }
 
-/* image songs */
+/* image musiques */
 .icon-wrapper {
   display: flex;
   align-items: center;
