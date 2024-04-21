@@ -1,5 +1,5 @@
 body {
-    min-height: 130vh;
+    min-height: 120vh;
     background: linear-gradient(#040306, #22273f);
 
     .categoryPage {
@@ -14,6 +14,7 @@ body {
 
         .categoryContainer {
             padding-top: 2rem;
+            padding-bottom: 2rem;
             margin-bottom: 10rem;
 
             h1 {
