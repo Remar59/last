@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Liremersion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenue sur le dépôt de Liremersion, une application React conçue pour améliorer l'expérience de lecture avec une ambiance sonore. Ce dépôt contient la partie front de notre application. Pour le back, c'est ici => https://github.com/Slimtouflo/api-liremersion
 
-## Available Scripts
+## Présentation
 
-In the project directory, you can run:
+Liremersion offre une plateforme où les utilisateurs peuvent choisir une émotion/ambiance/musique en fonction de leur lecture. L'application a pour but d'être la plus discrète possible. Vous la lancez, et ensuite, vous lisez !
 
-### `npm start`
+## Fonctionnalités
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Lecture interactive** : Choisissez une ambiance, puis laissez vous porter au fil de votre lecture. Les musiques utilisées sont toutes libres de droit.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**A VENIR**
+- **Authentification** : Système d'authentification qui permet de gérer ses musiques/ambiances préférées. 
+- **Favoris** : Ajout des favoris par utilisateur.
+- **Personnalisation** : Ajout de ses propres musiques, et de ses propres playlists, par utilisateur.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Technologies Utilisées
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React** : Pour construire une interface utilisateur dynamique et réactive.
+- **Redux** : Pour la gestion d'état globale.
+- **Node.js** : Pour le serveur backend.
+- **Express** : Framework de serveur utilisé dans l'environnement Node.js.
+- **MongoDB** : Base de données pour stocker les données utilisateur et les livres. La base est également accessible sur le cloud grâce à MongoDB Atlas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pour installer et exécuter Liremersion localement, suivez ces étapes :
 
-### `npm run eject`
+```bash
+git clone https://github.com/Remar59/last
+cd last
+npm install
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
