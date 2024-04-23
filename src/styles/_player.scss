@@ -23,7 +23,7 @@ body {
   }
 
   @media screen and (max-height: 585px) {
-    height: 20%;
+    height: 14vh;
   }
 
 }
@@ -186,6 +186,10 @@ button svg {
   width: 100%;
 
   @media screen and (max-width: 550px) {
+    display: none;
+  }
+
+  @media screen and (max-height: 585px) {
     display: none;
   }
 }
