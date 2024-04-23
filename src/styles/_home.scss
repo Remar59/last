@@ -96,6 +96,11 @@ body{
                     border-radius: 5px;
                     cursor: pointer;
                     object-fit: cover;
+                    
+                    @media screen and (max-height: 585px) {
+                        width: 90px;
+                        height: 90px;
+                    }
                 }
 
                 label {
@@ -125,6 +130,11 @@ body{
                     height: 130px;
                     border-radius: 5px;
                     object-fit: cover;
+
+                    @media screen and (max-height: 585px) {
+                        width: 90px;
+                        height: 90px;
+                    }
                 }
 
                 label {
