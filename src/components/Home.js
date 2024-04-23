@@ -72,7 +72,7 @@ function Home() {
           {categories.map((item) => (
               <Link to={`/category/${item._id}`}>
                 <div>
-                  <img src={item.image} alt={item.name} />
+                  <img src={item.image} alt="" />
                   <label htmlFor="img">{item.name}</label>
                 </div>
               </Link>
