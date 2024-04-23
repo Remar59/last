@@ -18,6 +18,10 @@ body{
         width: 95vw;
         margin: auto;
 
+        @media screen and (max-height: 585px) {
+            margin-bottom: 8rem;
+        }
+
         h2 {
             margin: 10px 10px;
         }
